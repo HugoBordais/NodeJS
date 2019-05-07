@@ -1,0 +1,19 @@
+{
+  "name": "got",
+  "version": "1.0.0",
+  "description": "",
+  "main": "JavaScript/index.js",
+  "scripts": {
+    "start": "nodemon ./JavaScript/app.js"
+  },
+  "author": "Hugo Bordais",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.19.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.3",
+    "socket.io": "^2.2.0",
+    "ws": "^7.0.0"
+  }
+}

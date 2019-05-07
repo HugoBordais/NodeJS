@@ -1,0 +1,27 @@
+html
+    head
+        title Bitcoin
+    body
+        h1 #{title}
+        button#btn Cliquer ici
+        p Le bitcoin vaut :
+            span#bitcoin #{bitcoinValue}
+
+
+        script(type='text/javascript').
+            document.addEventListener('DOMContentLoaded', function () {
+
+                const bitcoinBtn = document.querySelector('#btn')
+                const bitcoinValueElement = document.querySelector('#bitcoin')
+
+                bitcoinBtn.addEventListener('click', async function (e) {
+                    e.preventDefault()
+
+                    const response = await fetch('/bitcoin',{
+                        method : 'GET'
+                    })
+                    const bitcoinObject = await response.json()
+                    bitcoinValueElement.innerText = bitcoinObject.bitcoinValue
+                }
+            )
+            })
